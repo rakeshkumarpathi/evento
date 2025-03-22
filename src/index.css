@@ -1,0 +1,356 @@
+/* Imports and root variables remain unchanged */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+@import "tailwindcss";
+
+:root {
+  --main-color: #3867d6;
+}
+
+/* Global styles */
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background: #222;
+  background-image: linear-gradient(to bottom right, #111, #222);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  background: #333;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.141) inset;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 9%;
+  max-width: 100%;
+}
+
+.header .logo {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: bolder;
+  text-decoration: none;
+  margin-right: 40rem; /* Reduced from 40rem for better alignment */
+}
+
+.header .logo span {
+  color: var(--main-color);
+}
+
+.header .navbar a {
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 1.6rem;
+  text-decoration: none;
+}
+
+.header .navbar a:hover {
+  color: var(--main-color);
+}
+
+/* Section Base Styles */
+.home, .spotlight-section, .services, .gallery {
+  min-height: 900px; /* Equal height for all sections */
+  padding-top: 2rem; /* Consistent padding-top */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Home Section */
+.home .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 900px;
+  max-width: 1200px;
+  margin: 10rem auto 7rem;
+  padding: 0 1rem;
+}
+
+.home .content .text {
+  text-align: left;
+  max-width: 50%;
+}
+
+.home .content h3 {
+  color: #fff;
+  font-size: 4rem;
+  word-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.home .content h3 span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.home .content img {
+  width: 35rem;
+  height: 35rem;
+  max-width: 100%;
+}
+
+.home .content .img {
+  padding-right: 2rem;
+}
+
+/* Spotlight Section */
+.spotlight-section {
+  position: relative;
+  min-height: 700px; /* Matches other sections */
+  margin: 0;
+  padding: 0;
+}
+
+.spotlight-section h1{
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  word-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.spotlight-section h1 span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.spotlight-section {
+  margin-top: 6rem;
+  margin-bottom: 0;
+  max-width: 1200px; /* Align with other sections */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+
+.spotlight-section .swiper-slide {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 31.25rem;
+  width: 20rem;
+}
+
+.spotlight-section .swiper-slide img {
+  height: 100%; /* Fit within slide height */
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Button */
+.btn {
+  margin-right: 1rem;
+  display: inline-block;
+  padding: .1rem 1rem;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  background: #555;
+  color: #ffffffa0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--main-color);
+}
+
+/* Services Section */
+.services .heading {
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  word-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.services .heading span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto 6rem;
+  padding: 0 1rem;
+  margin-top: 5rem;
+}
+
+.services .box-container .box {
+  border-radius: .5rem;
+  background: #333;
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.services .box-container .box i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: var(--main-color);
+  color: #fff;
+}
+
+.services .box-container .box h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.services .box-container .box p {
+  font-size: 1rem;
+  color: #eee;
+  line-height: 1.8;
+}
+
+/* Gallery Section */
+.gallery .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto 1%;
+  padding: 0 1rem;
+}
+
+.gallery .box-container .box {
+  position: relative;
+  border: 1rem solid #333;
+  height: 18rem;
+  cursor: pointer;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.gallery .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box:hover img {
+  transform: scale(1.1);
+  filter: grayscale(100%);
+}
+
+.gallery .box-container .box .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-bottom: 1rem;
+  background: #333;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.gallery .box-container .box .icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 1rem;
+  background: #333;
+  text-align: center;
+}
+
+.gallery .box-container .box .icons a {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+.gallery .heading {
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  word-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.gallery .heading span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+/* Scrollbar */
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #444;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 5%;
+  }
+
+  .header .logo {
+    margin-right: 1rem;
+  }
+
+  .home, .spotlight-section, .services, .gallery {
+    min-height: auto; /* Allow flexibility on smaller screens */
+  }
+
+  .home .content {
+    flex-direction: column;
+    padding: 0 1rem;
+    margin: 8rem auto 4rem;
+  }
+
+  .home .content .text {
+    max-width: 100%;
+  }
+
+  .home .content img {
+    width: 100%;
+    height: auto;
+    max-width: 25rem;
+  }
+
+  .home .content .img {
+    padding-right: 0;
+  }
+
+  .swiper-home-slider {
+    margin-top: 4rem;
+  }
+
+  .services .box-container,
+  .gallery .box-container {
+    padding: 0 1rem;
+  }
+}
