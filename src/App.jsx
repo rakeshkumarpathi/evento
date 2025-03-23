@@ -4,6 +4,7 @@ import Home from './Home.jsx';
 import Service from './Service.jsx';
 import Spotlight from './Spotlight.jsx'; 
 import Gallery from './Gallery.jsx';
+import Price from './Pricing.jsx';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Spotlight /> 
       <Service />
       <Gallery/>
+      <Price/>
     </div>
   );
 }

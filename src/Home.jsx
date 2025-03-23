@@ -3,7 +3,7 @@ import home_img from './assets/slide-7.webp'
 
 export default function Home() {
   return (
-    <div>
+    <div className='homecontent'>
         <section className="home" id="home">
         <div className="content">
          <div className="text">
@@ -13,8 +13,8 @@ export default function Home() {
             <h3> 
               <span> Event organizers</span> 
             </h3>
-            <a href="#" className="btn"> Contact Us </a>
-            <a href="#" className="btn"> book now </a>
+            <a href="#contact" className="btn"> Contact Us </a>
+            <a href="#price" className="btn"> book now </a>
           </div>
           <div className="img">
             <img src={home_img} alt="home image"/> 
