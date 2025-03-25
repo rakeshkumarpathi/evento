@@ -5,7 +5,6 @@ export default function Pricing() {
     <div>
         <section className="price" id="price">
   <h1 className="heading">
-    {" "}
     our <span>price</span>
   </h1>
   <div className="box-container">
