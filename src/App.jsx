@@ -6,6 +6,7 @@ import Spotlight from './Spotlight.jsx';
 import Gallery from './Gallery.jsx';
 import Price from './Pricing.jsx';
 import Login from './Login.jsx';
+import Footer from './footer.jsx';
 import './index.css';
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
       <Service />
       <Gallery />
       <Price />
+      <Footer />
     </div>
   );
 }
